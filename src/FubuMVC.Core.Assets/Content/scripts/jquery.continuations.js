@@ -167,7 +167,7 @@
             
 			var header = response.getResponseHeader('Content-Type');
             if (header && header.indexOf('json') != -1) {
-                continuation = JSON.parse(response.responseText);
+                continuation = $.parseJSON(response.responseText);
             }
             
             continuation.contentType = header;
